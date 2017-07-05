@@ -34,22 +34,7 @@ module.exports = {
   },
   module: {
     preLoaders: [
-      {
-        test: /\.vue$/,
-        loader: 'eslint',
-        include: [
-          path.join(projectRoot, 'src')
-        ],
-        exclude: /node_modules/
-      },
-      {
-        test: /\.js$/,
-        loader: 'eslint',
-        include: [
-          path.join(projectRoot, 'src')
-        ],
-        exclude: /node_modules/
-      }
+      
     ],
     loaders: [
       {
@@ -85,9 +70,6 @@ module.exports = {
         }
       }
     ]
-  },
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
   },
   vue: {
     loaders: utils.cssLoaders({ sourceMap: useCssSourceMap }),
