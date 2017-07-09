@@ -10,7 +10,7 @@ import Index from './components/index/index';
 import Table from './components/table/table';
 import Form from './components/form/form';
 import other from './components/other/other';
-import Demo from './components/demo/demo';
+import Test from './components/test/test';
 import 'font-awesome/css/font-awesome.min.css';
 import Mock from './mock/mock';
 Mock.mockData();
@@ -47,7 +47,7 @@ let routes = [
       {path: '/table', component: Table, name: 'table', class: 'fa-table'},
       {path: '/form', component: Form, name: 'form', class: 'fa-newspaper-o'},
       {path: '/other', component: other, name: 'other', class: 'fa-plug'},
-      {path: '/demo', component: Demo, name: 'demo', class: 'fa-plug'}
+      {path: '/test', component: Test, name: 'test', class: 'fa-plug'}
     ]
   }
 ];
