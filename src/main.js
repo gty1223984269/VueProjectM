@@ -47,6 +47,7 @@ let routes = [
       {path: '/table', component: Table, name: 'table', class: 'fa-table'},
       {path: '/form', component: Form, name: 'form', class: 'fa-newspaper-o'},
       {path: '/other', component: other, name: 'other', class: 'fa-plug'},
+      //ff
       {path: '/test', component: Test, name: 'test', class: 'fa-plug'}
     ]
   }
