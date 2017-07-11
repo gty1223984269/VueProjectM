@@ -5,18 +5,12 @@ import VueRouter from 'vue-router';
 import axios from 'axios';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-default/index.css';
-import App from './App';
-import Index from './components/index/index';
-import Table from './components/table/table';
-import Form from './components/form/form';
-import other from './components/other/other';
-import Test from './components/test/test';
 import 'font-awesome/css/font-awesome.min.css';
 import Mock from './mock/mock';
+import routes from './routes'
 Mock.mockData();
 Vue.use(VueRouter);// 安装路由功能
 /* eslint-disable no-new */
-Vue.use(VueRouter);
 Vue.prototype.$http = axios;
 Vue.use(ElementUI);
 
@@ -39,32 +33,9 @@ Vue.use(ElementUI);
 // });
 const UserProfile = { template: '<div>Profile</div>' }
 const UserPosts = { template: '<div>Posts</div>' }
-let routes = [
-  {
-    path: '/',
-    component: App,
-    children: [
-      {path: '/index', component: Index, name: 'index', class: 'fa-line-chart'},
-      {path: '/table', component: Table, name: 'table', class: 'fa-table'},
-      {path: '/form', component: Form, name: 'form', class: 'fa-newspaper-o'},
-      {path: '/other', component: other, name: 'other', class: 'fa-plug'},
-      {path: '/test', component: Test, name: 'test', class: 'fa-plug',
-       children: [
-        {
-          path: 'test/profile',
-          component: UserProfile
-        },
-        {
-          path: 'test/posts',
-          component: UserPosts
-        }
-      ]}
-    ]
-  }
-];
 let router = new VueRouter({
   // 'mode': 'history', 去掉URL的#号，需要配置服务器http://router.vuejs.org/zh-cn/essentials/history-mode.html
-  'linkActiveClass': 'active',
+  // 'linkActiveClass': 'active',
   routes
 });
 let app = new Vue({
