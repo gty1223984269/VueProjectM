@@ -37,7 +37,8 @@ Vue.use(ElementUI);
 //     return response
 //   });
 // });
-
+const UserProfile = { template: '<div>Profile</div>' }
+const UserPosts = { template: '<div>Posts</div>' }
 let routes = [
   {
     path: '/',
@@ -47,8 +48,17 @@ let routes = [
       {path: '/table', component: Table, name: 'table', class: 'fa-table'},
       {path: '/form', component: Form, name: 'form', class: 'fa-newspaper-o'},
       {path: '/other', component: other, name: 'other', class: 'fa-plug'},
-      //ff
-      {path: '/test', component: Test, name: 'test', class: 'fa-plug'}
+      {path: '/test', component: Test, name: 'test', class: 'fa-plug',
+       children: [
+        {
+          path: 'test/profile',
+          component: UserProfile
+        },
+        {
+          path: 'test/posts',
+          component: UserPosts
+        }
+      ]}
     ]
   }
 ];
