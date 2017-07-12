@@ -31,8 +31,6 @@ Vue.use(ElementUI);
 //     return response
 //   });
 // });
-const UserProfile = { template: '<div>Profile</div>' }
-const UserPosts = { template: '<div>Posts</div>' }
 let router = new VueRouter({
   // 'mode': 'history', 去掉URL的#号，需要配置服务器http://router.vuejs.org/zh-cn/essentials/history-mode.html
   // 'linkActiveClass': 'active',

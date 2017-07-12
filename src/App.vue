@@ -3,9 +3,14 @@
     <v-header :user="user"></v-header>
     <el-col :span="24" class="main">
       <el-row>
-        <el-menu :default-active="$route.path" class="mar-l el-menu-vertical-demo el-col el-col-3" light router>
+      
+  <el-menu :default-active="$route.path" class="mar-l el-menu-vertical-demo el-col el-col-3" light 
+
+router>
           <template v-for="(item,index) in $router.options.routes[0].children" v-if="!item.hidden">
-            <el-menu-item :index="item.path" ><i class="fa" :class="item.class"></i>{{item.name}}</el-menu-item>
+            <el-menu-item :index="item.path" ><i class="fa" :class="item.class"></i>{{item.name}}
+
+</el-menu-item>
           </template>
         </el-menu>
         <section class="contentCon">
